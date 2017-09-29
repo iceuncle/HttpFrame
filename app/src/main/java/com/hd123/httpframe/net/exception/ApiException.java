@@ -3,7 +3,7 @@ package com.hd123.httpframe.net.exception;
 import java.io.IOException;
 
 /**
- * 界面描述：
+ * 界面描述：异常类
  * <p>
  * Created by tianyang on 2017/9/27.
  */

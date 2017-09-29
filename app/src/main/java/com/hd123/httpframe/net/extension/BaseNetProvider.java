@@ -8,7 +8,6 @@ import com.hd123.httpframe.net.retrofit.NetProvider;
 import com.hd123.httpframe.net.retrofit.RequestHandler;
 
 import java.io.IOException;
-import java.util.UUID;
 
 import okhttp3.CookieJar;
 import okhttp3.Interceptor;
@@ -17,7 +16,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * 界面描述：
+ * 界面描述：NetProvider实现类
  * <p>
  * Created by tianyang on 2017/9/27.
  */
@@ -70,9 +69,6 @@ public class BaseNetProvider implements NetProvider {
         return BuildConfig.DEBUG;
     }
 
-    private String getTraceId() {
-        return UUID.randomUUID().toString();
-    }
 
     private class HeaderHandler implements RequestHandler {
 

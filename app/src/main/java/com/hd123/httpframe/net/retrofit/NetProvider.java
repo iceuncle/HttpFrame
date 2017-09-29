@@ -5,7 +5,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 
 /**
- * 界面描述：
+ * 界面描述：回调处理
  * <p>
  * Created by tianyang on 2017/9/27.
  */

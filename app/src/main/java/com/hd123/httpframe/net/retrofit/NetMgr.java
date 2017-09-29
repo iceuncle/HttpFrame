@@ -17,23 +17,20 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * 界面描述：
+ * 界面描述：Retrofit实现类
  * <p>
  * Created by tianyang on 2017/9/27.
  */
 
 public class NetMgr {
-    public static final long connectTimeoutMills = 10 * 1000L;
-    public static final long readTimeoutMills = 10 * 1000L;
+    private final long connectTimeoutMills = 10 * 1000L;
+    private final long readTimeoutMills = 10 * 1000L;
     private NetProvider sProvider = null;
     private static NetMgr instance;
     private Map<String, NetProvider> providerMap = new HashMap<>();
     private Map<String, Retrofit> retrofitMap = new HashMap<>();
     private Map<String, OkHttpClient> clientMap = new HashMap<>();
 
-    private NetMgr() {
-
-    }
 
     public static NetMgr getInstance() {
         if (instance == null) {
@@ -47,7 +44,7 @@ public class NetMgr {
     }
 
 
-    public static <S> S get(String baseUrl, Class<S> service) {
+    public <S> S get(String baseUrl, Class<S> service) {
         return getInstance().getRetrofit(baseUrl).create(service);
     }
 
@@ -63,7 +60,7 @@ public class NetMgr {
         return sProvider;
     }
 
-    public static void clearCache() {
+    public void clearCache() {
         getInstance().retrofitMap.clear();
         getInstance().clientMap.clear();
     }

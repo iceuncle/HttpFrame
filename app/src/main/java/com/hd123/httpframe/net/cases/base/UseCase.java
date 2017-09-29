@@ -21,12 +21,12 @@ public abstract class UseCase<T> {
     //用于分页请求
     protected PagingReq pagingReq = new PagingReq();
 
-    //普通的请求
+
     protected T ApiClient() {
         return NetMgr.getInstance().getRetrofit(BuildConfig.BaseUrl).create(getType());
     }
 
-
+    //指定观察者与被观察者线程
     protected <T> Observable.Transformer<T, T> normalSchedulers() {
         return new Observable.Transformer<T, T>() {
             @Override
