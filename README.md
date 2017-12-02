@@ -334,5 +334,3 @@ public class GetCitiesCase extends UseCase<GetCitiesCase.Api> {
 调用就很简单了，只需绑定生命周期（防止内存泄漏），然后订阅Subscriber，处理成功或失败后的返回。
 
 
-
-附上[github](https://github.com/iceuncle/HttpFrame)链接，多多Star噢(～￣▽￣)～
