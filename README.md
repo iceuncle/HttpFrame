@@ -1,3 +1,5 @@
+参考github项目[XDroidMvp](https://github.com/limedroid/XDroidMvp)
+
 想必Retrifit+Rxjava的使用，如今已经非常的普及了吧。在此介绍一种比较优雅的有关Retrifit+Rxjava封装的方法。
 
 原本的步骤应该是这样，首先要创建OKHttpClient ，在其中添加一些拦截和超时处理，然后创建Retrofit对象并注入OKHttpClient对象，再获取接口实例Observable对象，然后绑定生命周期（防止内存泄漏）并订阅观察者Subscriber处理返回信息。
